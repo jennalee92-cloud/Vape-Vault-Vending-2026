@@ -42,37 +42,40 @@ export const PRINTFUL_PRODUCTS: MerchProduct[] = [
     url: 'https://forgewell.printful.me/product/golf-rope-cap',
     image: 'https://cdn.printful.me/t/quick-stores/variants/w339/183671006ab92b6b61523__825',
   },
-  // These 5 listings are separate Printful products (own link each), but Printful
-  // has not generated a mockup image for any of them yet — the "image" field stays
-  // empty and the card falls back to the sticker icon until Printful renders one.
+  // These 5 listings are separate Printful products (own link each), one per sticker design.
   {
-    name: 'Die-Cut Stickers \u2014 Design 1',
+    name: 'Die-Cut Stickers \u2014 Vape Vault Wordmark',
     category: 'Stickers',
     price: '$5.00',
     url: 'https://forgewell.printful.me/product/die-cut-stickers',
+    image: 'https://cdn.printful.me/t/quick-stores/products/w339/18818332-957-6ab9313b4b166__360',
   },
   {
-    name: 'Die-Cut Stickers \u2014 Design 2',
+    name: 'Die-Cut Stickers \u2014 VW Monogram',
     category: 'Stickers',
     price: '$5.00',
     url: 'https://forgewell.printful.me/product/die-cut-stickers-6ab937077d556',
+    image: 'https://cdn.printful.me/t/quick-stores/products/w339/18818332-957-6ab937072b3a0__360',
   },
   {
-    name: 'Die-Cut Stickers \u2014 Design 3',
+    name: 'Die-Cut Stickers \u2014 Vape Vault Script',
     category: 'Stickers',
     price: '$5.00',
     url: 'https://forgewell.printful.me/product/die-cut-stickers-6ab93611361cc',
+    image: 'https://cdn.printful.me/t/quick-stores/products/w339/18818332-957-6ab93610f1d78__360',
   },
   {
-    name: 'Die-Cut Stickers \u2014 Design 4',
+    name: 'Die-Cut Stickers \u2014 Boxed Logo',
     category: 'Stickers',
     price: '$5.50',
     url: 'https://forgewell.printful.me/product/die-cut-stickers-6ab934564c2c0',
+    image: 'https://cdn.printful.me/t/quick-stores/products/w339/18818332-957-6ab93456117cf__360',
   },
   {
-    name: 'Die-Cut Stickers \u2014 Design 5',
+    name: 'Die-Cut Stickers \u2014 Circular Badge',
     category: 'Stickers',
     price: '$5.00',
     url: 'https://forgewell.printful.me/product/die-cut-stickers-6ab93380b01e0',
+    image: 'https://cdn.printful.me/t/quick-stores/products/w339/18818332-957-6ab933806456a__360',
   },
 ]
