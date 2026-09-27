@@ -6,10 +6,14 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import merchDesign from './Screenshot 2026-09-09 204738.png'
 import wordmarkSticker from './vape-vault-wordmark-sticker.png'
+import vwMonogramSticker from './vw-monogram-sticker.png'
 import { PRINTFUL_STORE_URL, PRINTFUL_PRODUCTS } from './constants'
 
-// This one design has an exact brand asset on hand, so it's shown instead of the Printful CDN thumbnail.
-const WORDMARK_STICKER_URL = 'https://forgewell.printful.me/product/die-cut-stickers-6ab93380b01e0'
+// These designs have exact brand assets on hand, shown instead of the Printful CDN thumbnail.
+const LOCAL_STICKER_IMAGES: Record<string, typeof wordmarkSticker> = {
+  'https://forgewell.printful.me/product/die-cut-stickers-6ab93380b01e0': wordmarkSticker,
+  'https://forgewell.printful.me/product/die-cut-stickers-6ab93611361cc': vwMonogramSticker,
+}
 
 export const metadata: Metadata = {
   title: 'Vape Vault Vending Merch | Official Vape Vault Apparel',
@@ -67,9 +71,9 @@ export default function Merch() {
                   className="group border border-white/10 bg-[#111113] p-5 transition hover:border-[#c7ff32]"
                 >
                   <div className="mb-5 flex aspect-square items-center justify-center overflow-hidden bg-[#09090b]">
-                    {product.url === WORDMARK_STICKER_URL ? (
+                    {LOCAL_STICKER_IMAGES[product.url] ? (
                       <Image
-                        src={wordmarkSticker}
+                        src={LOCAL_STICKER_IMAGES[product.url]}
                         alt={product.name}
                         className="h-full w-full object-contain transition duration-300 group-hover:scale-105"
                       />
