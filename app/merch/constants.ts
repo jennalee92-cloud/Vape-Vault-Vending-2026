@@ -51,13 +51,6 @@ export const PRINTFUL_PRODUCTS: MerchProduct[] = [
     // Uses a local brand asset in page.tsx instead of this remote thumbnail.
   },
   {
-    name: 'Die-Cut Stickers \u2014 Boxed Logo',
-    category: 'Stickers',
-    price: '$5.00',
-    url: 'https://forgewell.printful.me/product/die-cut-stickers-6ab937077d556',
-    // Uses a local brand asset in page.tsx instead of this remote thumbnail.
-  },
-  {
     name: 'Die-Cut Stickers \u2014 VW Monogram',
     category: 'Stickers',
     price: '$5.00',
@@ -70,6 +63,13 @@ export const PRINTFUL_PRODUCTS: MerchProduct[] = [
     price: '$5.50',
     url: 'https://forgewell.printful.me/product/die-cut-stickers-6ab934564c2c0',
     image: 'https://cdn.printful.me/t/quick-stores/products/w168/18818332-957-6ab93456117cf__360',
+  },
+  {
+    name: 'Die-Cut Stickers \u2014 Boxed Logo',
+    category: 'Stickers',
+    price: '$5.00',
+    url: 'https://forgewell.printful.me/product/die-cut-stickers-6ab937077d556',
+    // Uses a local brand asset in page.tsx instead of this remote thumbnail.
   },
   {
     name: 'Die-Cut Stickers \u2014 Circular Badge',
