@@ -42,30 +42,25 @@ export const PRINTFUL_PRODUCTS: MerchProduct[] = [
     url: 'https://forgewell.printful.me/product/golf-rope-cap',
     image: 'https://cdn.printful.me/t/quick-stores/variants/w339/183671006ab92b6b61523__825',
   },
-  // These 5 listings are separate Printful products (own link each), one per sticker design.
+  // Each sticker is a separate Printful product with its own real design and link.
+  // The "boxed logo" variant (die-cut-stickers-6ab937077d556) is a near-duplicate of
+  // the wordmark design below and is intentionally left out of this list.
   {
     name: 'Die-Cut Stickers \u2014 Vape Vault Wordmark',
     category: 'Stickers',
     price: '$5.00',
-    url: 'https://forgewell.printful.me/product/die-cut-stickers',
+    url: 'https://forgewell.printful.me/product/die-cut-stickers-6ab93380b01e0',
     // Uses a local brand asset in page.tsx instead of this remote thumbnail.
   },
   {
     name: 'Die-Cut Stickers \u2014 VW Monogram',
     category: 'Stickers',
     price: '$5.00',
-    url: 'https://forgewell.printful.me/product/die-cut-stickers-6ab937077d556',
-    image: 'https://cdn.printful.me/t/quick-stores/products/w168/18818332-957-6ab937072b3a0__360',
-  },
-  {
-    name: 'Die-Cut Stickers \u2014 Vape Vault Script',
-    category: 'Stickers',
-    price: '$5.00',
     url: 'https://forgewell.printful.me/product/die-cut-stickers-6ab93611361cc',
     image: 'https://cdn.printful.me/t/quick-stores/products/w168/18818332-957-6ab93610f1d78__360',
   },
   {
-    name: 'Die-Cut Stickers \u2014 Boxed Logo',
+    name: 'Die-Cut Stickers \u2014 Vape Vault Script',
     category: 'Stickers',
     price: '$5.50',
     url: 'https://forgewell.printful.me/product/die-cut-stickers-6ab934564c2c0',
@@ -75,7 +70,7 @@ export const PRINTFUL_PRODUCTS: MerchProduct[] = [
     name: 'Die-Cut Stickers \u2014 Circular Badge',
     category: 'Stickers',
     price: '$5.00',
-    url: 'https://forgewell.printful.me/product/die-cut-stickers-6ab93380b01e0',
-    image: 'https://cdn.printful.me/t/quick-stores/products/w168/18818332-957-6ab933806456a__360',
+    url: 'https://forgewell.printful.me/product/die-cut-stickers',
+    image: 'https://cdn.printful.me/t/quick-stores/products/w168/18818332-957-6ab9313b4b166__360',
   },
 ]

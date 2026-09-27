@@ -9,7 +9,7 @@ import wordmarkSticker from './vape-vault-wordmark-sticker.png'
 import { PRINTFUL_STORE_URL, PRINTFUL_PRODUCTS } from './constants'
 
 // This one design has an exact brand asset on hand, so it's shown instead of the Printful CDN thumbnail.
-const WORDMARK_STICKER_URL = 'https://forgewell.printful.me/product/die-cut-stickers'
+const WORDMARK_STICKER_URL = 'https://forgewell.printful.me/product/die-cut-stickers-6ab93380b01e0'
 
 export const metadata: Metadata = {
   title: 'Vape Vault Vending Merch | Official Vape Vault Apparel',
