@@ -5,7 +5,11 @@ import { ArrowUpRight, Sticker, Sparkles } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import merchDesign from './Screenshot 2026-09-09 204738.png'
+import wordmarkSticker from './vape-vault-wordmark-sticker.png'
 import { PRINTFUL_STORE_URL, PRINTFUL_PRODUCTS } from './constants'
+
+// This one design has an exact brand asset on hand, so it's shown instead of the Printful CDN thumbnail.
+const WORDMARK_STICKER_URL = 'https://forgewell.printful.me/product/die-cut-stickers'
 
 export const metadata: Metadata = {
   title: 'Vape Vault Vending Merch | Official Vape Vault Apparel',
@@ -63,7 +67,13 @@ export default function Merch() {
                   className="group border border-white/10 bg-[#111113] p-5 transition hover:border-[#c7ff32]"
                 >
                   <div className="mb-5 flex aspect-square items-center justify-center overflow-hidden bg-[#09090b]">
-                    {product.image ? (
+                    {product.url === WORDMARK_STICKER_URL ? (
+                      <Image
+                        src={wordmarkSticker}
+                        alt={product.name}
+                        className="h-full w-full object-contain transition duration-300 group-hover:scale-105"
+                      />
+                    ) : product.image ? (
                       <Image
                         src={product.image}
                         alt={product.name}

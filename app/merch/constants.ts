@@ -48,7 +48,7 @@ export const PRINTFUL_PRODUCTS: MerchProduct[] = [
     category: 'Stickers',
     price: '$5.00',
     url: 'https://forgewell.printful.me/product/die-cut-stickers',
-    image: 'https://cdn.printful.me/t/quick-stores/products/w168/18818332-957-6ab9313b4b166__360',
+    // Uses a local brand asset in page.tsx instead of this remote thumbnail.
   },
   {
     name: 'Die-Cut Stickers \u2014 VW Monogram',
