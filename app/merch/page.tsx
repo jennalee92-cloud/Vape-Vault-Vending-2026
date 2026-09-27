@@ -7,11 +7,13 @@ import Footer from '../components/Footer'
 import merchDesign from './Screenshot 2026-09-09 204738.png'
 import wordmarkSticker from './vape-vault-wordmark-sticker.png'
 import vwMonogramSticker from './vw-monogram-sticker.png'
+import boxedLogoSticker from './boxed-logo-sticker.png'
 import { PRINTFUL_STORE_URL, PRINTFUL_PRODUCTS } from './constants'
 
 // These designs have exact brand assets on hand, shown instead of the Printful CDN thumbnail.
 const LOCAL_STICKER_IMAGES: Record<string, typeof wordmarkSticker> = {
   'https://forgewell.printful.me/product/die-cut-stickers-6ab93380b01e0': wordmarkSticker,
+  'https://forgewell.printful.me/product/die-cut-stickers-6ab937077d556': boxedLogoSticker,
   'https://forgewell.printful.me/product/die-cut-stickers-6ab93611361cc': vwMonogramSticker,
 }
 

@@ -43,13 +43,18 @@ export const PRINTFUL_PRODUCTS: MerchProduct[] = [
     image: 'https://cdn.printful.me/t/quick-stores/variants/w339/183671006ab92b6b61523__825',
   },
   // Each sticker is a separate Printful product with its own real design and link.
-  // The "boxed logo" variant (die-cut-stickers-6ab937077d556) is a near-duplicate of
-  // the wordmark design below and is intentionally left out of this list.
   {
     name: 'Die-Cut Stickers \u2014 Vape Vault Wordmark',
     category: 'Stickers',
     price: '$5.00',
     url: 'https://forgewell.printful.me/product/die-cut-stickers-6ab93380b01e0',
+    // Uses a local brand asset in page.tsx instead of this remote thumbnail.
+  },
+  {
+    name: 'Die-Cut Stickers \u2014 Boxed Logo',
+    category: 'Stickers',
+    price: '$5.00',
+    url: 'https://forgewell.printful.me/product/die-cut-stickers-6ab937077d556',
     // Uses a local brand asset in page.tsx instead of this remote thumbnail.
   },
   {
