@@ -42,10 +42,37 @@ export const PRINTFUL_PRODUCTS: MerchProduct[] = [
     url: 'https://forgewell.printful.me/product/golf-rope-cap',
     image: 'https://cdn.printful.me/t/quick-stores/variants/w339/183671006ab92b6b61523__825',
   },
+  // These 5 listings are separate Printful products (own link each), but Printful
+  // has not generated a mockup image for any of them yet — the "image" field stays
+  // empty and the card falls back to the sticker icon until Printful renders one.
   {
-    name: 'Die-Cut Stickers',
+    name: 'Die-Cut Stickers \u2014 Design 1',
     category: 'Stickers',
-    price: 'From $5.00',
+    price: '$5.00',
     url: 'https://forgewell.printful.me/product/die-cut-stickers',
+  },
+  {
+    name: 'Die-Cut Stickers \u2014 Design 2',
+    category: 'Stickers',
+    price: '$5.00',
+    url: 'https://forgewell.printful.me/product/die-cut-stickers-6ab937077d556',
+  },
+  {
+    name: 'Die-Cut Stickers \u2014 Design 3',
+    category: 'Stickers',
+    price: '$5.00',
+    url: 'https://forgewell.printful.me/product/die-cut-stickers-6ab93611361cc',
+  },
+  {
+    name: 'Die-Cut Stickers \u2014 Design 4',
+    category: 'Stickers',
+    price: '$5.50',
+    url: 'https://forgewell.printful.me/product/die-cut-stickers-6ab934564c2c0',
+  },
+  {
+    name: 'Die-Cut Stickers \u2014 Design 5',
+    category: 'Stickers',
+    price: '$5.00',
+    url: 'https://forgewell.printful.me/product/die-cut-stickers-6ab93380b01e0',
   },
 ]
