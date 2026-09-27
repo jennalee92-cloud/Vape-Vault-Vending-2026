@@ -2,7 +2,7 @@
 
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { ShoppingCart, Cpu, Settings, TrendingUp } from 'lucide-react'
+import { CheckCircle2, Shield, CreditCard, Wifi, BarChart3 } from 'lucide-react'
 
 export default function Services() {
   return (
@@ -12,17 +12,18 @@ export default function Services() {
       <div className="min-h-screen pt-24">
         {/* Hero */}
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
-          <h1 className="text-5xl font-bold mb-6">Our Services</h1>
-          <p className="text-xl text-gray-300 max-w-2xl">
-            Complete turnkey vending solutions. We handle selection, installation, inventory, compliance, and support—everything you need to generate revenue.
+          <p className="mb-4 text-xs font-black uppercase tracking-[0.22em] text-[#c7ff32]">Vape Vault Vending</p>
+          <h1 className="mb-6 text-5xl font-black uppercase tracking-tight text-white">Built for venues that stay open late.</h1>
+          <p className="max-w-2xl text-xl text-gray-300">
+            Turnkey vape vending for bars, lounges, and nightlife venues. We handle installation, inventory, compliance, and support so your venue can generate revenue without adding operational strain.
           </p>
         </section>
 
         {/* The Machine */}
         <section className="border-t border-purple-900/20 bg-slate-900/50 py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold mb-12">Our Machine Partner: VapeTM Flagship</h2>
-            <p className="text-gray-400 mb-8">The #1 Smart Vape Vending Machine in the USA</p>
+            <h2 className="text-3xl font-bold mb-12">Vape Vault Vending + VapeTM Flagship</h2>
+            <p className="text-gray-400 mb-8">The premium smart vending platform built for fast-moving nightlife venues.</p>
             
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mb-8">
               <div className="rounded-xl border border-purple-900/40 bg-purple-900/20 p-6">
@@ -61,9 +62,9 @@ export default function Services() {
         </section>
 
         {/* What We Cover */}
-        <section className="border-t border-purple-900/20 py-20">
+        <section id="how-it-works" className="border-t border-purple-900/20 py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold mb-12">We Take Care of Everything</h2>
+            <h2 className="text-3xl font-bold mb-12">We Take Care of Every Detail</h2>
             
             <div className="grid gap-8 md:grid-cols-2">
               <div className="rounded-xl border border-purple-600/40 bg-purple-600/20 p-8">
@@ -108,7 +109,7 @@ export default function Services() {
                 <h3 className="text-xl font-bold mb-6">Your Job</h3>
                 <div className="text-5xl font-bold text-cyan-400 mb-4">Open Your Doors</div>
                 <p className="text-gray-200 mb-6">
-                  That's it. The machine runs 24/7 without staff. No restocking, no compliance headaches, no tech support needed.
+                  That&apos;s it. The machine runs 24/7 without staff. No restocking, no compliance headaches, no tech support needed.
                 </p>
                 
                 <div className="space-y-4 mt-8">
@@ -133,8 +134,8 @@ export default function Services() {
         {/* Products */}
         <section className="border-t border-purple-900/20 bg-slate-900/50 py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold mb-12">Premium Products in Every Machine</h2>
-            <p className="text-gray-400 mb-12">All 100% US and Texas compliant</p>
+            <h2 className="text-3xl font-bold mb-12">Premium Products for the Night Crowd</h2>
+            <p className="text-gray-400 mb-12">Carefully selected inventory that stays compliant, profitable, and ready for peak traffic.</p>
             
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               <div className="rounded-xl border-2 border-purple-600 bg-gradient-to-br from-purple-900/30 to-purple-900/10 p-6">
@@ -189,5 +190,3 @@ export default function Services() {
     </>
   )
 }
-
-import { CheckCircle2, Shield, CreditCard, Wifi, BarChart3 } from 'lucide-react'

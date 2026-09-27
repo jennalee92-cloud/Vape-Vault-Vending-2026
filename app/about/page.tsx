@@ -14,32 +14,33 @@ export default function About() {
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid gap-12 lg:grid-cols-2">
             <div className="animate-fade-in">
-              <h1 className="text-5xl font-bold mb-6">About Vape Vault Vending</h1>
-              <p className="text-xl text-gray-300 mb-6">
-                We're turnkey vape vending solution experts. We handle everything so you don't have to—machines, inventory, compliance, and support. Your job? Just open your doors and earn passive income.
+              <p className="mb-4 text-xs font-black uppercase tracking-[0.22em] text-[#c7ff32]">Vape Vault Vending</p>
+              <h1 className="mb-6 text-5xl font-black uppercase tracking-tight text-white">Built for better nights and bigger revenue.</h1>
+              <p className="mb-6 text-xl text-gray-300">
+                We help bars, lounges, and nightlife venues turn idle space into a premium revenue stream with a machine that feels like part of the experience.
               </p>
-              <p className="text-gray-400 mb-8">
-                Our mission is to make vending effortless for bar and club owners. We believe in pure profit, zero hassle, and passive income that actually works.
+              <p className="mb-8 text-gray-400">
+                From installation to inventory and compliance, Vape Vault Vending manages the operation so your team can focus on the room, not the logistics.
               </p>
             </div>
             
             <div className="animate-slide-in-right space-y-4">
               <div className="rounded-xl border border-purple-900/40 bg-purple-900/20 p-6">
                 <Award className="h-8 w-8 text-purple-400 mb-4" />
-                <h3 className="text-xl font-bold mb-2">Industry Leading</h3>
-                <p className="text-gray-400">Partnered with VapeTM Flagship Machines—the #1 smart vape vending solution in the USA.</p>
+                <h3 className="text-xl font-bold mb-2">Premium Partner</h3>
+                <p className="text-gray-400">Partnered with VapeTM Flagship Machines to bring a premium, compliant vending experience into high-energy venues.</p>
               </div>
               
               <div className="rounded-xl border border-cyan-900/40 bg-cyan-900/20 p-6">
                 <Users className="h-8 w-8 text-cyan-400 mb-4" />
-                <h3 className="text-xl font-bold mb-2">500+ Deployed</h3>
-                <p className="text-gray-400">Over 500 machines successfully installed nationwide with proven revenue performance.</p>
+                <h3 className="text-xl font-bold mb-2">500+ Venue Deployments</h3>
+                <p className="text-gray-400">More than 500 installations nationwide with proven performance in real-world nightlife and hospitality environments.</p>
               </div>
               
               <div className="rounded-xl border border-green-900/40 bg-green-900/20 p-6">
                 <Zap className="h-8 w-8 text-green-400 mb-4" />
-                <h3 className="text-xl font-bold mb-2">24/7 Support</h3>
-                <p className="text-gray-400">Real-time monitoring, remote management, and dedicated technical support always available.</p>
+                <h3 className="text-xl font-bold mb-2">Always On</h3>
+                <p className="text-gray-400">Real-time monitoring, remote diagnostics, and hands-on support keep the machine working when the room is busiest.</p>
               </div>
             </div>
           </div>
@@ -48,7 +49,7 @@ export default function About() {
         {/* Values */}
         <section className="border-t border-purple-900/20 bg-slate-900/50 py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold mb-12 text-center">Our Values</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center">What We Stand For</h2>
             
             <div className="grid gap-8 md:grid-cols-3">
               <div className="text-center">
@@ -56,7 +57,7 @@ export default function About() {
                   <CheckCircle2 className="h-6 w-6 text-purple-400" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Hassle-Free</h3>
-                <p className="text-gray-400">We handle the complexity so you don't have to. Focus on running your venue; we'll manage the machine.</p>
+                <p className="text-gray-400">We take care of the machine, inventory, and compliance so your venue can stay focused on the experience.</p>
               </div>
               
               <div className="text-center">
@@ -64,7 +65,7 @@ export default function About() {
                   <CheckCircle2 className="h-6 w-6 text-cyan-400" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Transparent</h3>
-                <p className="text-gray-400">Clear numbers, clear terms, zero surprises. You always know exactly what you're earning.</p>
+                <p className="text-gray-400">Clear reporting, straightforward terms, and no surprises—just a cleaner path to passive revenue.</p>
               </div>
               
               <div className="text-center">
@@ -72,7 +73,7 @@ export default function About() {
                   <CheckCircle2 className="h-6 w-6 text-green-400" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Compliant</h3>
-                <p className="text-gray-400">Every location is 100% compliant with Texas regulations. Age verification, permits, taxes—all covered.</p>
+                <p className="text-gray-400">Every deployment is built around responsible verification, proper permits, and full operational compliance.</p>
               </div>
             </div>
           </div>

@@ -4,14 +4,14 @@ import path from 'path'
 
 export async function POST(req: Request) {
   try {
-    const body = await req.json()
+    const body = (await req.json()) as Record<string, unknown>
     const dataDir = path.join(process.cwd(), 'data')
     if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir)
     const filePath = path.join(dataDir, 'submissions.json')
-    let submissions: any[] = []
+    let submissions: Record<string, unknown>[] = []
     if (fs.existsSync(filePath)) {
       const raw = fs.readFileSync(filePath, 'utf8')
-      submissions = raw ? JSON.parse(raw) : []
+      submissions = raw ? (JSON.parse(raw) as Record<string, unknown>[]) : []
     }
     const entry = { ...body, receivedAt: new Date().toISOString() }
     submissions.push(entry)

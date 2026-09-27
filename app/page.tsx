@@ -3,259 +3,60 @@
 import Link from 'next/link'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import { ArrowRight, TrendingUp, DollarSign, Zap, Shield, Cpu, Package, Briefcase } from 'lucide-react'
+import { ArrowDownRight, ArrowUpRight, PlayCircle, ShieldCheck, Sparkles, Zap } from 'lucide-react'
+
+const features = [
+  { number: '01', title: 'The machine', text: 'A premium, age-verified vending experience built for the places people stay late.', icon: Zap },
+  { number: '02', title: 'The inventory', text: 'Fast-moving products, restocked on schedule and monitored without adding work for your team.', icon: Sparkles },
+  { number: '03', title: 'The upside', text: 'A new revenue stream for your venue with zero equipment investment on your side.', icon: ShieldCheck },
+]
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      
-      {/* Hero Section */}
-      <section className="relative min-h-screen overflow-hidden pt-24">
-        {/* Gradient Background */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-purple-600/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-cyan-600/20 blur-3xl"></div>
-        </div>
-
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
-            {/* Left Column */}
-            <div className="animate-fade-in space-y-8">
-              <div>
-                <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-purple-900/40 bg-purple-900/20 px-4 py-2 text-sm">
-                  <TrendingUp className="h-4 w-4 text-purple-400" />
-                  <span className="text-purple-300">Market Growing 17M+ Users</span>
-                </div>
-                
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
-                  Passive Income from<br />
-                  <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
-                    Vending Machines
-                  </span>
-                </h1>
-                
-                <p className="text-lg text-gray-300 leading-relaxed max-w-2xl">
-                  Turnkey vape vending solutions with $0 investment. We handle everything—machines, inventory, compliance, and support. You just open your doors and earn.
-                </p>
-              </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 pt-4">
-                <div className="rounded-lg border border-purple-900/40 bg-purple-900/20 p-4">
-                  <div className="text-2xl font-bold text-purple-400">~$3K</div>
-                  <div className="text-xs text-gray-400">Monthly Sales</div>
-                </div>
-                <div className="rounded-lg border border-cyan-900/40 bg-cyan-900/20 p-4">
-                  <div className="text-2xl font-bold text-cyan-400">$265/mo</div>
-                  <div className="text-xs text-gray-400">Your Earnings (10%)</div>
-                </div>
-                <div className="rounded-lg border border-green-900/40 bg-green-900/20 p-4">
-                  <div className="text-2xl font-bold text-green-400">$0</div>
-                  <div className="text-xs text-gray-400">Your Investment</div>
-                </div>
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Link href="/contact" className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-cyan-600 px-8 py-4 font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all">
-                  Request an Appointment
-                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Link>
-                <a href="tel:432-661-8982" className="inline-flex items-center justify-center gap-2 rounded-full border border-purple-900/40 bg-purple-900/20 px-8 py-4 font-semibold hover:border-purple-900/60 hover:bg-purple-900/30 transition">
-                  <span>Call Now: 432-661-8982</span>
-                </a>
-              </div>
-            </div>
-
-            {/* Right Column - Feature Cards */}
-            <div className="animate-slide-in-right space-y-4">
-              <div className="rounded-2xl border border-purple-600/40 bg-gradient-to-br from-purple-900/30 to-purple-900/10 p-6 hover:border-purple-600/60 transition">
-                <div className="flex gap-4">
-                  <Zap className="h-6 w-6 flex-shrink-0 text-purple-400" />
-                  <div>
-                    <h3 className="font-semibold mb-2">No Installation Hassle</h3>
-                    <p className="text-sm text-gray-400">We select, purchase, deliver, and install the perfect machine for your space.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-2xl border border-cyan-600/40 bg-gradient-to-br from-cyan-900/30 to-cyan-900/10 p-6 hover:border-cyan-600/60 transition">
-                <div className="flex gap-4">
-                  <Package className="h-6 w-6 flex-shrink-0 text-cyan-400" />
-                  <div>
-                    <h3 className="font-semibold mb-2">Inventory Management</h3>
-                    <p className="text-sm text-gray-400">Premium vapes, tobacco alternatives, and accessories. We handle restocking and compliance.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-2xl border border-green-600/40 bg-gradient-to-br from-green-900/30 to-green-900/10 p-6 hover:border-green-600/60 transition">
-                <div className="flex gap-4">
-                  <Shield className="h-6 w-6 flex-shrink-0 text-green-400" />
-                  <div>
-                    <h3 className="font-semibold mb-2">100% Compliant</h3>
-                    <p className="text-sm text-gray-400">Age verification, TX permits, tax filing—we handle all compliance requirements.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-2xl border border-orange-600/40 bg-gradient-to-br from-orange-900/30 to-orange-900/10 p-6 hover:border-orange-600/60 transition">
-                <div className="flex gap-4">
-                  <Briefcase className="h-6 w-6 flex-shrink-0 text-orange-400" />
-                  <div>
-                    <h3 className="font-semibold mb-2">24/7 Support</h3>
-                    <p className="text-sm text-gray-400">Real-time monitoring, remote management, and dedicated technical support.</p>
-                  </div>
-                </div>
+      <main>
+        <section className="relative isolate min-h-[760px] overflow-hidden border-b border-white/10 pt-28">
+          <div className="absolute inset-0 -z-30 bg-[#09090b]" />
+          <div className="absolute inset-0 -z-25 bg-[url('/smoking-hero.jpg.jpg')] bg-cover bg-[center_left] bg-no-repeat opacity-80" />
+          <div className="absolute inset-y-0 right-0 -z-20 w-full bg-[linear-gradient(100deg,#09090b_20%,#101014_68%,#19151d_100%)]" />
+          <div className="relative z-10 mx-auto flex min-h-[630px] max-w-7xl items-end px-5 pb-16 sm:px-8 lg:px-12">
+            <div className="max-w-3xl">
+              <div className="mb-7 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.24em] text-[#c7ff32]"><span className="h-px w-10 bg-[#c7ff32]" /> Vape Vault Vending</div>
+              <h1 className="display-face max-w-4xl text-[clamp(4.5rem,11vw,10rem)] leading-[.82] tracking-wide text-white">VENDING<br /><span className="text-[#c7ff32]">AFTER</span> DARK.</h1>
+              <p className="mt-8 max-w-xl text-base leading-7 text-white/65 sm:text-lg">Premium vape vending built for venues where the room is moving, the energy is high, and the machine needs to feel like part of the experience.</p>
+              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+                <Link href="/contact" className="group inline-flex min-h-12 items-center justify-center gap-3 bg-[#c7ff32] px-6 text-sm font-black uppercase tracking-[0.12em] text-black transition hover:bg-white">Request a placement <ArrowUpRight size={18} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></Link>
+                <Link href="/services" className="inline-flex min-h-12 items-center justify-center gap-3 border border-white/25 px-6 text-sm font-bold uppercase tracking-[0.12em] text-white transition hover:border-[#d946ef] hover:text-[#d946ef]"><PlayCircle size={17} /> See the setup</Link>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+          <div className="absolute bottom-8 right-8 hidden items-center gap-3 text-[10px] font-bold uppercase tracking-[0.2em] text-white/45 lg:flex"><ArrowDownRight size={18} className="text-[#d946ef]" /> Scroll to explore</div>
+        </section>
 
-      {/* Market Opportunity Section */}
-      <section className="border-t border-purple-900/20 bg-gradient-to-b from-slate-950 to-slate-900 py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 text-center">
-            <h2 className="text-4xl font-bold mb-4">The Vape Market is Booming</h2>
-            <p className="text-gray-400">And your bar is perfectly positioned to capture it.</p>
-          </div>
+        <section className="border-b border-white/10 bg-[#111114] py-6">
+          <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-6 px-5 sm:px-8 lg:px-12"><p className="text-xs font-bold uppercase tracking-[0.2em] text-white/45">A new lane for venue revenue</p><div className="flex gap-8 text-sm font-bold text-white/80"><span><b className="text-[#c7ff32]">$0</b> setup cost</span><span><b className="text-[#d946ef]">24/7</b> availability</span><span><b className="text-[#38bdf8]">100%</b> managed</span></div></div>
+        </section>
 
-          <div className="grid gap-6 md:grid-cols-3">
-            <div className="rounded-xl border border-purple-900/40 bg-purple-900/20 p-8 text-center">
-              <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-purple-600/30">
-                <TrendingUp className="h-8 w-8 text-purple-400" />
-              </div>
-              <div className="text-3xl font-bold text-purple-400 mb-2">~17M</div>
-              <p className="text-sm font-medium">Adult e-cigarette users in the U.S.</p>
-              <p className="mt-2 text-xs text-gray-400">CDC NCHS data — a massive, growing market</p>
+        <section className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12">
+          <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-end"><div><p className="mb-5 text-xs font-bold uppercase tracking-[0.22em] text-[#d946ef]">Why Vape Vault Vending</p><h2 className="display-face max-w-md text-6xl leading-[.9] tracking-wide text-white sm:text-8xl">YOUR VENUE.<br /><span className="text-[#38bdf8]">MORE ENERGY.</span></h2></div><p className="max-w-xl text-lg leading-8 text-white/55">Vape Vault Vending keeps your guests in the room, your staff focused, and your venue earning from a category that is already moving.</p></div>
+          <div className="mt-16 grid gap-px overflow-hidden border border-white/10 bg-white/10 md:grid-cols-3">{features.map(({ number, title, text, icon: Icon }) => <div key={number} className="bg-[#09090b] p-7 transition hover:bg-[#16161a] sm:p-9"><div className="mb-16 flex items-start justify-between"><span className="text-xs font-bold text-[#c7ff32]">{number}</span><Icon className="text-[#d946ef]" size={22} /></div><h3 className="text-xl font-bold text-white">{title}</h3><p className="mt-3 text-sm leading-6 text-white/50">{text}</p></div>)}</div>
+        </section>
+
+        <section className="border-y border-white/10 bg-[#111114] py-12">
+          <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 px-5 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left sm:px-8 lg:px-12">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#c7ff32]">The Vault Collection</p>
+              <h3 className="mt-2 text-2xl font-bold text-white sm:text-3xl">Official Vape Vault Vending merch is here.</h3>
             </div>
-
-            <div className="rounded-xl border border-cyan-900/40 bg-cyan-900/20 p-8 text-center">
-              <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-cyan-600/30">
-                <Cpu className="h-8 w-8 text-cyan-400" />
-              </div>
-              <div className="text-3xl font-bold text-cyan-400 mb-2">73%</div>
-              <p className="text-sm font-medium">Prefer in-venue convenience</p>
-              <p className="mt-2 text-xs text-gray-400">They buy where they drink & socialize</p>
-            </div>
-
-            <div className="rounded-xl border border-green-900/40 bg-green-900/20 p-8 text-center">
-              <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-green-600/30">
-                <DollarSign className="h-8 w-8 text-green-400" />
-              </div>
-              <div className="text-3xl font-bold text-green-400 mb-2">$0</div>
-              <p className="text-sm font-medium">Your out-of-pocket investment</p>
-              <p className="mt-2 text-xs text-gray-400">We cover every cost — start to finish</p>
-            </div>
-          </div>
-
-          <div className="mt-8 rounded-xl border border-purple-600/40 bg-purple-600/20 p-8 text-center">
-            <p className="text-lg font-medium text-purple-300">
-              Bars and clubs are the #1 high-traffic venues for vape sales — and most don't have vending yet. You can be first in your market.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="border-t border-purple-900/20 py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 text-center">
-            <h2 className="text-4xl font-bold mb-4">How It Works</h2>
-            <p className="text-gray-400">From handshake to revenue in 3 simple steps. Typically live in under 3 weeks.</p>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-3">
-            {[
-              {
-                step: 1,
-                title: 'Sign & Get Compliant',
-                timeline: 'Week 1–2',
-                items: [
-                  'Sign our partnership agreement',
-                  'We help apply for TX Vapor Permit',
-                  'We pay the permit fee entirely'
-                ],
-                color: 'purple'
-              },
-              {
-                step: 2,
-                title: 'We Install & Stock',
-                timeline: 'Week 2–3',
-                items: [
-                  'We deliver & install your VapeTM',
-                  'We load it with premium products',
-                  'We configure payments & WiFi'
-                ],
-                color: 'cyan'
-              },
-              {
-                step: 3,
-                title: 'Revenue Starts Flowing',
-                timeline: 'Month 1 onwards',
-                items: [
-                  'Machine runs 24/7 — no staff needed',
-                  'We handle restocking & maintenance',
-                  'We give you the monthly tax amount'
-                ],
-                color: 'green'
-              }
-            ].map((section) => (
-              <div key={section.step} className={`rounded-xl border border-${section.color}-900/40 bg-${section.color}-900/20 p-8`}>
-                <div className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-${section.color}-600 text-xl font-bold`}>
-                  {section.step}
-                </div>
-                <h3 className="text-xl font-bold mb-2">{section.title}</h3>
-                <p className={`text-sm text-${section.color}-300 mb-4`}>{section.timeline}</p>
-                <ul className="space-y-2">
-                  {section.items.map((item, i) => (
-                    <li key={i} className="flex gap-2 text-sm text-gray-300">
-                      <span className={`text-${section.color}-400 font-bold`}>✓</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="relative border-t border-purple-900/20 overflow-hidden py-20">
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-cyan-600/10 blur-3xl"></div>
-        </div>
-        
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-4">
-            Ready to Build Your<br />
-            <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              New Revenue Stream?
-            </span>
-          </h2>
-          <p className="text-lg text-gray-400 mb-8">
-            $0 investment. 100% passive income. Earn your share every month.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-cyan-600 px-8 py-4 font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all">
-              Get Started Today
-              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+            <Link href="/merch" className="group inline-flex min-h-12 shrink-0 items-center justify-center gap-3 bg-[#c7ff32] px-6 text-sm font-black uppercase tracking-[0.12em] text-black transition hover:bg-white">
+              Shop Merch <ArrowUpRight size={18} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </Link>
-            <a href="tel:432-661-8982" className="inline-flex items-center justify-center gap-2 rounded-full border border-purple-900/40 bg-purple-900/20 px-8 py-4 font-semibold hover:border-purple-900/60 hover:bg-purple-900/30 transition">
-              Call: 432-661-8982
-            </a>
           </div>
+        </section>
 
-          <div className="mt-12 text-sm text-gray-500">
-            <p>*Revenue estimates based on average machine performance. Individual results vary by venue traffic and product mix. Profit share percentage is negotiable.</p>
-          </div>
-        </div>
-      </section>
-
+        <section className="relative overflow-hidden border-y border-white/10 bg-[#c7ff32] px-5 py-20 text-black sm:px-8 lg:px-12"><div className="absolute -right-10 -top-20 display-face text-[18rem] leading-none text-black/[.06]">VVV</div><div className="relative mx-auto flex max-w-7xl flex-col justify-between gap-10 lg:flex-row lg:items-end"><div><p className="mb-5 text-xs font-black uppercase tracking-[0.22em]">Ready when your venue is</p><h2 className="display-face max-w-3xl text-7xl leading-[.85] tracking-wide sm:text-9xl">MAKE ROOM<br />FOR MORE.</h2></div><Link href="/contact" className="group inline-flex min-h-14 shrink-0 items-center justify-center gap-3 border-2 border-black px-7 text-sm font-black uppercase tracking-[0.12em] transition hover:bg-black hover:text-[#c7ff32]">Talk to the team <ArrowUpRight size={19} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></Link></div></section>
+      </main>
       <Footer />
     </>
   )
