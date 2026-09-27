@@ -105,8 +105,8 @@ function ContactForm() {
         <textarea name="message" className="w-full rounded-md border border-white/10 bg-transparent px-4 py-3 text-white outline-none focus:ring-2 focus:ring-purple-500" rows={4} />
       </div>
 
-      <div className="flex items-center justify-between">
-        <button type="submit" disabled={status === 'sending'} className="rounded-full bg-gradient-to-r from-purple-600 to-cyan-600 px-6 py-3 font-semibold">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <button type="submit" disabled={status === 'sending'} className="min-h-12 rounded-full bg-gradient-to-r from-purple-600 to-cyan-600 px-6 py-3 font-semibold">
           {status === 'sending' ? 'Sending…' : status === 'sent' ? 'Sent — Thanks!' : 'Request Appointment'}
         </button>
         <a href="tel:432-661-8982" className="text-sm text-orange-400">Or call: 432-661-8982</a>

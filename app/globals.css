@@ -12,16 +12,21 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   background: #09090b;
   color: #f4f4f5;
   font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
 }
 
 .bg-night { background: #09090b; }
 .display-face { font-family: 'Bebas Neue', Impact, sans-serif; }
+
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
 .hero-smoke-canvas {
   position: absolute;

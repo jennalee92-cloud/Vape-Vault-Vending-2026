@@ -1,7 +1,21 @@
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
-import { ArrowUpRight, Phone } from 'lucide-react'
+import { ArrowUpRight, Menu, Phone, X } from 'lucide-react'
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/services', label: 'Services' },
+  { href: '/pricing', label: 'Pricing' },
+  { href: '/merch', label: 'Merch' },
+  { href: '/faq', label: 'FAQ' },
+]
 
 export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#09090b]/85 backdrop-blur-xl">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -16,13 +30,10 @@ export default function Navbar() {
           </Link>
 
           {/* Nav Links */}
-          <div className="hidden items-center gap-7 md:flex">
-            <Link href="/" className="text-xs font-bold uppercase tracking-[0.16em] text-white/60 transition hover:text-[#c7ff32]">Home</Link>
-            <Link href="/about" className="text-xs font-bold uppercase tracking-[0.16em] text-white/60 transition hover:text-[#c7ff32]">About</Link>
-            <Link href="/services" className="text-xs font-bold uppercase tracking-[0.16em] text-white/60 transition hover:text-[#c7ff32]">Services</Link>
-            <Link href="/pricing" className="text-xs font-bold uppercase tracking-[0.16em] text-white/60 transition hover:text-[#c7ff32]">Pricing</Link>
-            <Link href="/merch" className="text-xs font-bold uppercase tracking-[0.16em] text-white/60 transition hover:text-[#c7ff32]">Merch</Link>
-            <Link href="/faq" className="text-xs font-bold uppercase tracking-[0.16em] text-white/60 transition hover:text-[#c7ff32]">FAQ</Link>
+          <div className="hidden items-center gap-7 lg:flex">
+            {navLinks.map((link) => (
+              <Link key={link.href} href={link.href} className="text-xs font-bold uppercase tracking-[0.16em] text-white/60 transition hover:text-[#c7ff32]">{link.label}</Link>
+            ))}
           </div>
 
           {/* CTA Buttons */}
@@ -34,9 +45,40 @@ export default function Navbar() {
             <Link href="/contact" className="group flex items-center gap-2 bg-[#c7ff32] px-4 py-2.5 text-xs font-black uppercase tracking-[0.12em] text-black transition hover:bg-white">
               Start Here <ArrowUpRight size={15} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
+            <button
+              type="button"
+              onClick={() => setIsMenuOpen((open) => !open)}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-nav-menu"
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+              className="flex h-11 w-11 items-center justify-center border border-white/15 text-white transition hover:border-[#c7ff32] hover:text-[#c7ff32] lg:hidden"
+            >
+              {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div id="mobile-nav-menu" className="flex flex-col gap-1 border-t border-white/10 pb-6 pt-4 lg:hidden">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsMenuOpen(false)}
+                className="flex min-h-12 items-center text-sm font-bold uppercase tracking-[0.16em] text-white/70 transition hover:text-[#c7ff32]"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <a href="tel:432-661-8982" onClick={() => setIsMenuOpen(false)} className="flex min-h-12 items-center gap-2 text-sm font-bold text-white/70 transition hover:text-[#c7ff32]">
+              <Phone size={18} />
+              432-661-8982
+            </a>
+          </div>
+        )}
       </div>
+
     </nav>
   )
 }

@@ -1,3 +1,6 @@
+import type { StaticImageData } from 'next/image'
+import denimTshirtBack from './denim-tshirt-back.png'
+
 // The Printful Quick Store handles all products, checkout, payment, and fulfillment.
 // This is the single source of truth for the storefront link so it can be swapped
 // for a direct Printful API integration later without touching the rest of the page.
@@ -9,6 +12,8 @@ export type MerchProduct = {
   price: string
   url: string
   image?: string
+  // When set, the product card shows a swipeable carousel instead of a single image.
+  images?: (string | StaticImageData)[]
 }
 
 // Each product links straight to its own page on the Printful store so a click
@@ -26,7 +31,10 @@ export const PRINTFUL_PRODUCTS: MerchProduct[] = [
     category: 'T-Shirts',
     price: 'From $32.00',
     url: 'https://forgewell.printful.me/product/denim-t-shirt',
-    image: 'https://cdn.printful.me/t/quick-stores/variants/w339/183670036ab9293353c4b__825',
+    images: [
+      denimTshirtBack,
+      'https://cdn.printful.me/t/quick-stores/variants/w339/183670036ab9293353c4b__825',
+    ],
   },
   {
     name: 'Women\u2019s Garment Dye Cropped Tee',

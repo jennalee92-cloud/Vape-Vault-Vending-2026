@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { ArrowUpRight, Sticker, Sparkles } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import ProductImageCarousel from './ProductImageCarousel'
 import merchDesign from './Screenshot 2026-09-09 204738.png'
 import wordmarkSticker from './vape-vault-wordmark-sticker.png'
 import vwMonogramSticker from './vw-monogram-sticker.png'
@@ -55,7 +56,7 @@ export default function Merch() {
               </div>
               <p className="mt-3 text-[11px] uppercase tracking-[0.14em] text-white/30">Fulfilled by Printful</p>
             </div>
-            <div className="relative overflow-hidden border border-white/15 bg-[#111113]">
+            <div className="relative min-w-0 overflow-hidden border border-white/15 bg-[#111113]">
               <Image src={merchDesign} alt="Vape Vault Vending T-shirt and sticker artwork" className="h-auto w-full" priority />
             </div>
           </div>
@@ -73,7 +74,9 @@ export default function Merch() {
                   className="group border border-white/10 bg-[#111113] p-5 transition hover:border-[#c7ff32]"
                 >
                   <div className="mb-5 flex aspect-square items-center justify-center overflow-hidden bg-[#09090b]">
-                    {LOCAL_STICKER_IMAGES[product.url] ? (
+                    {product.images ? (
+                      <ProductImageCarousel images={product.images} alt={product.name} />
+                    ) : LOCAL_STICKER_IMAGES[product.url] ? (
                       <Image
                         src={LOCAL_STICKER_IMAGES[product.url]}
                         alt={product.name}
