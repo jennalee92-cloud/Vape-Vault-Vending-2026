@@ -1,23 +1,16 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowUpRight, Sticker, Shirt, ShoppingBag, Sparkles } from 'lucide-react'
+import { ArrowUpRight, Sticker, Sparkles } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import merchDesign from './Screenshot 2026-09-09 204738.png'
-import { PRINTFUL_STORE_URL } from './constants'
+import { PRINTFUL_STORE_URL, PRINTFUL_PRODUCTS } from './constants'
 
 export const metadata: Metadata = {
   title: 'Vape Vault Vending Merch | Official Vape Vault Apparel',
   description: 'Shop official Vape Vault Vending apparel, hats, stickers, hoodies, and more.',
 }
-
-const categories = [
-  { name: 'T-Shirts', description: 'Signature tees for everyday wear.', color: 'lime', icon: Shirt },
-  { name: 'Hoodies', description: 'Heavyweight layers for late nights.', color: 'purple', icon: Shirt },
-  { name: 'Hats', description: 'Structured caps with embroidered branding.', color: 'cyan', icon: ShoppingBag },
-  { name: 'Stickers', description: 'Weatherproof packs for gear and cases.', color: 'orange', icon: Sticker },
-]
 
 export default function Merch() {
   return (
@@ -58,31 +51,41 @@ export default function Merch() {
           </div>
 
           <div className="mt-16">
-            <p className="mb-6 text-xs font-black uppercase tracking-[0.22em] text-[#d946ef]">Shop by category</p>
+            <p className="mb-6 text-xs font-black uppercase tracking-[0.22em] text-[#d946ef]">Shop the collection</p>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {categories.map((category) => {
-                const CategoryIcon = category.icon
-                return (
-                  <a
-                    key={category.name}
-                    href={PRINTFUL_STORE_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`group border border-${category.color}-900/50 bg-${category.color}-900/10 p-6 transition hover:border-[#c7ff32]`}
-                  >
-                    <div className="mb-6 flex aspect-[4/3] items-center justify-center bg-[#111113]">
-                      <CategoryIcon className={`h-16 w-16 text-${category.color}-400`} strokeWidth={1} aria-hidden="true" />
-                    </div>
-                    <h2 className="text-xl font-bold uppercase tracking-tight text-white">{category.name}</h2>
-                    <p className="mt-2 text-sm leading-6 text-white/55">{category.description}</p>
-                    <span className="mt-5 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.12em] text-white/70 transition group-hover:text-[#c7ff32]">
-                      Shop {category.name} <ArrowUpRight size={14} aria-hidden="true" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                    </span>
-                  </a>
-                )
-              })}
+              {PRINTFUL_PRODUCTS.map((product) => (
+                <a
+                  key={product.url}
+                  href={product.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Shop ${product.name} on the official Vape Vault Printful store (opens in a new tab)`}
+                  className="group border border-white/10 bg-[#111113] p-5 transition hover:border-[#c7ff32]"
+                >
+                  <div className="mb-5 flex aspect-square items-center justify-center overflow-hidden bg-[#09090b]">
+                    {product.image ? (
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        width={339}
+                        height={339}
+                        className="h-full w-full object-contain transition duration-300 group-hover:scale-105"
+                      />
+                    ) : (
+                      <Sticker className="h-16 w-16 text-orange-400" strokeWidth={1} aria-hidden="true" />
+                    )}
+                  </div>
+                  <p className="text-xs font-black uppercase tracking-[0.16em] text-[#c7ff32]">{product.category}</p>
+                  <h2 className="mt-2 text-lg font-bold leading-tight text-white">{product.name}</h2>
+                  <p className="mt-1 text-sm text-white/55">{product.price}</p>
+                  <span className="mt-5 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.12em] text-white/70 transition group-hover:text-[#c7ff32]">
+                    View on Printful <ArrowUpRight size={14} aria-hidden="true" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </span>
+                </a>
+              ))}
             </div>
           </div>
+
         </section>
 
         <section className="border-t border-purple-900/20 bg-slate-900/50 py-20">
